@@ -40,15 +40,15 @@ function moveEyeCursorOutside(e, myEyeApple) {
   myEyeApple.style.left = sideX / similarity + "px";
 }
 
-eyeCovers.forEach((eye) => {
-  eye.addEventListener("mousemove", (e) => {
+eyeCovers.forEach((eyeCover) => {
+  eyeCover.addEventListener("mousemove", (e) => {
     eyeApples.forEach((eyeApple) => {
       eyeApple.style.transition = "";
     });
     e.stopPropagation();
 
-    const myEye = eye.closest(".eye");
-    const myEyeApple = eye.closest(".eye__apple");
+    const myEye = eyeCover.closest(".eye");
+    const myEyeApple = eyeCover.closest(".eye__apple");
 
     myLowerEyelids.forEach((eyelid) => {
       eyelid.classList.remove("eyelid_lower_anim");
