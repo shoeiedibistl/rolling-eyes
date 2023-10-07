@@ -50,11 +50,11 @@ eyeCovers.forEach((eye) => {
     const myEye = eye.closest(".eye");
     const myEyeApple = eye.closest(".eye__apple");
 
-    myLowerEyelids.forEach((Eyelid) => {
-      Eyelid.classList.remove("eyelid_lower_anim");
+    myLowerEyelids.forEach((eyelid) => {
+      eyelid.classList.remove("eyelid_lower_anim");
     });
-    myUpperEyelids.forEach((Eyelid) => {
-      Eyelid.classList.remove("eyelid_upper_anim");
+    myUpperEyelids.forEach((eyelid) => {
+      eyelid.classList.remove("eyelid_upper_anim");
     });
 
     const otherEye = document.querySelector(myEye.classList.contains("eye_left") ? ".eye_right" : ".eye_left");
