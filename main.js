@@ -81,11 +81,11 @@ eyeCovers.forEach((eye) => {
 
 eyeCovers.forEach((eye) => {
   eye.addEventListener("mouseout", (e) => {
-    myLowerEyelids.forEach((Eyelid) => {
-      Eyelid.classList.add("eyelid_lower_anim");
+    myLowerEyelids.forEach((eyelid) => {
+      eyelid.classList.add("eyelid_lower_anim");
     });
-    myUpperEyelids.forEach((Eyelid) => {
-      Eyelid.classList.add("eyelid_upper_anim");
+    myUpperEyelids.forEach((eyelid) => {
+      eyelid.classList.add("eyelid_upper_anim");
     });
   });
 });
