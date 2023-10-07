@@ -9,7 +9,6 @@ html * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  cursor: url(fly.png), auto;
 }
 
 .face {
@@ -81,6 +80,9 @@ html * {
 .eyelid_upper {
   top: -50%;
   border-bottom: 2px solid #777;
+}
+
+.eyelid_upper_anim {
   animation: ease-in eyelid-upper-blinking 10s infinite;
 }
 
@@ -126,6 +128,9 @@ html * {
 .eyelid_lower {
   bottom: -50%;
   border-top: 2px solid #777;
+}
+
+.eyelid_lower_anim {
   animation: ease-in eyelid-lower-blinking 10s infinite;
 }
 
@@ -232,4 +237,15 @@ html * {
 .eye__glare_right {
   width: calc(var(--right-eye-iris-diameter) / 2);
   height: calc(var(--right-eye-iris-diameter) / 2);
+}
+
+.eye-cover {
+  width: 700%;
+  height: 700%;
+  /* background-color: rgba(0, 0, 255, 0.364); */
+  z-index: 4;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
