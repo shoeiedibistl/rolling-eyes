@@ -75,7 +75,7 @@ html * {
   width: 100%;
   height: 50%;
   background-color: antiquewhite;
-  z-index: 9;
+  z-index: 3;
 }
 
 .eyelid_upper {
@@ -176,7 +176,7 @@ html * {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 9;
+  z-index: 2;
 }
 
 .eye__center_relative {
@@ -184,7 +184,7 @@ html * {
   height: 100%;
   display: block;
   position: relative;
-  z-index: 99;
+  z-index: 1;
 }
 
 .eye__iris {
