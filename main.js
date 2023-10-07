@@ -6,13 +6,22 @@ const eyeCovers = document.querySelectorAll(".eye-cover");
 const myLowerEyelids = document.querySelectorAll(".eyelid_lower");
 const myUpperEyelids = document.querySelectorAll(".eyelid_upper");
 
-face.addEventListener("mousemove", (e) => moveEyes(e));
+face.addEventListener("mousemove", function (e) {
+  moveEyes(e);
+  myUpperEyelids.forEach((upperEyelid) => {
+    upperEyelid.classList.remove("eyelid_relax");
+  });
+});
 
 face.addEventListener("mouseout", () => {
   eyeApples.forEach((eyeApple) => {
     eyeApple.style.transition = "0.2s";
     eyeApple.style.top = "";
     eyeApple.style.left = "";
+  });
+
+  myUpperEyelids.forEach((upperEyelid) => {
+    upperEyelid.classList.add("eyelid_relax");
   });
 });
 
@@ -54,7 +63,7 @@ eyeCovers.forEach((eyeCover) => {
       eyelid.classList.remove("eyelid_lower_anim");
     });
     myUpperEyelids.forEach((eyelid) => {
-      eyelid.classList.remove("eyelid_upper_anim");
+      eyelid.classList.remove("eyelid_upper_anim", "eyelid_relax");
     });
 
     const otherEye = document.querySelector(myEye.classList.contains("eye_left") ? ".eye_right" : ".eye_left");
