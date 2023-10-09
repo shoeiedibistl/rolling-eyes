@@ -33,23 +33,28 @@ html * {
 }
 
 .eye {
-  width: var(--left-eye-diameter);
-  height: var(--left-eye-diameter);
   border: 2px solid #777;
   overflow: hidden;
   border-radius: 50%;
   display: grid;
   background-color: #fff;
-  justify-self: end;
   align-self: center;
   overflow: hidden;
   position: relative;
+}
+
+.eye_left {
+  width: var(--left-eye-diameter);
+  height: var(--left-eye-diameter);
+  justify-self: end;
+  transform: rotate(-5deg);
 }
 
 .eye_right {
   width: var(--right-eye-diameter);
   height: var(--right-eye-diameter);
   justify-self: start;
+  transform: rotate(4deg);
 }
 
 .eye__apple {
