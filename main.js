@@ -1,10 +1,10 @@
 const face = document.querySelector(".face");
 const eyes = document.querySelectorAll(".eye");
 const eyeApples = document.querySelectorAll(".eye__apple");
-
 const eyeCovers = document.querySelectorAll(".eye-cover");
 const myLowerEyelids = document.querySelectorAll(".eyelid_lower");
 const myUpperEyelids = document.querySelectorAll(".eyelid_upper");
+let chill;
 
 face.addEventListener("mousemove", function (e) {
   moveEyes(e);
@@ -12,6 +12,18 @@ face.addEventListener("mousemove", function (e) {
     upperEyelid.classList.remove("eyelid_relax");
   });
 });
+
+function relax() {
+  myUpperEyelids.forEach((upperEyelid) => {
+    upperEyelid.classList.add("eyelid_relax");
+  });
+  eyeApples.forEach((eyeApple) => {
+    eyeApple.classList.add("eye__apple_relax");
+    eyeApple.style.transition = "0.3s";
+    eyeApple.style.top = "";
+    eyeApple.style.left = "";
+  });
+}
 
 face.addEventListener("mouseout", () => {
   eyeApples.forEach((eyeApple) => {
@@ -40,6 +52,9 @@ function moveEyes(e) {
     eyeApple.style.transition = "";
     eyeApple.classList.remove("eye__apple_relax");
   });
+
+  clearTimeout(chill);
+  chill = setTimeout(() => relax(), 5 * 1000);
 }
 
 function moveEyeCursorOutside(e, myEyeApple) {
