@@ -44,9 +44,6 @@ function getCenter(block) {
 }
 
 function moveEyes(e) {
-  const x = e.clientX;
-  const y = e.clientY;
-
   eyeApples.forEach((eyeApple) => {
     moveEyeCursorOutside(e, eyeApple);
     eyeApple.style.transition = "";
