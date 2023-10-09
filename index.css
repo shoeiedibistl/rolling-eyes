@@ -230,7 +230,7 @@ html * {
   z-index: 2;
 }
 
-.eye__center_relative {
+.eye__center-relative {
   width: 100%;
   height: 100%;
   display: block;
