@@ -63,6 +63,43 @@ html * {
   left: 0;
 }
 
+.eye__apple_relax {
+  animation: eye-apple-relax 10s infinite;
+}
+
+@keyframes eye-apple-relax {
+  0% {
+    left: 0;
+  }
+  48% {
+    left: 0;
+  }
+  50% {
+    left: -25%;
+  }
+  53% {
+    left: -25%;
+  }
+  56% {
+    left: 0;
+  }
+  62% {
+    left: 0;
+  }
+  64% {
+    left: 25%;
+  }
+  67% {
+    left: 25%;
+  }
+  70% {
+    left: 0;
+  }
+  100% {
+    left: 0;
+  }
+}
+
 .eye__apple_right {
   width: calc(100% - var(--right-eye-iris-diameter));
   height: calc(100% - var(--right-eye-iris-diameter));
