@@ -15,6 +15,7 @@ face.addEventListener("mousemove", function (e) {
 
 face.addEventListener("mouseout", () => {
   eyeApples.forEach((eyeApple) => {
+    eyeApple.classList.add("eye__apple_relax");
     eyeApple.style.transition = "0.2s";
     eyeApple.style.top = "";
     eyeApple.style.left = "";
@@ -37,6 +38,7 @@ function moveEyes(e) {
   eyeApples.forEach((eyeApple) => {
     moveEyeCursorOutside(e, eyeApple);
     eyeApple.style.transition = "";
+    eyeApple.classList.remove("eye__apple_relax");
   });
 }
 
@@ -53,6 +55,7 @@ eyeCovers.forEach((eyeCover) => {
   eyeCover.addEventListener("mousemove", (e) => {
     eyeApples.forEach((eyeApple) => {
       eyeApple.style.transition = "";
+      eyeApple.classList.remove("eye__apple_relax");
     });
     e.stopPropagation();
 
@@ -103,6 +106,7 @@ eyes.forEach((eye) => {
   eye.addEventListener("mouseout", (e) => {
     eyeApples.forEach((eyeApple) => {
       eyeApple.style.transition = "";
+      eyeApple.classList.remove("eye__apple_relax");
     });
   });
 });
